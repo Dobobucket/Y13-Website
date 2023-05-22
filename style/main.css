@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    
+}
+
+main, header {
+    margin: 0;
+    padding: 20px;
+}
+
+section, aside, footer {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+@keyframes retract {
+    from {width: 130px; height: 260px;}
+    to {width: 60px; height: 50px;}
+}
+
+@keyframes expand {
+    from {width: 60px; height: 50px;}
+    to {width: 130px; height: 260px;}
+}
+
+@keyframes show {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes hide {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+.menu {
+    display: flex;
+    background-color: black;
+    border-bottom: white solid 2px; 
+    border-right: white solid 2px;
+    width: 60px;
+    height: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    animation-name: retract;
+    animation-duration: .5s;
+    padding-top: 12px;
+}
+
+.navbar {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.menu:hover .child {
+    animation-name: show;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+
+.navbar div:nth-child(1) {animation-delay: 0.0s; }
+.navbar div:nth-child(2) {animation-delay: 0.1s; }
+.navbar div:nth-child(3) {animation-delay: 0.2s; }
+.navbar div:nth-child(4) {animation-delay: 0.3s; }
+.navbar div:nth-child(5) {animation-delay: 0.4s; }
+
+.child {
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    padding: 2px;
+    width: 100px;
+    height: 25px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    display: none;
+}
+
+.child:hover {
+    background-color: #8BA0BD;
+}
+
+.child:hover a{
+    color: black;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+
+.button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: xx-large;
+    position: absolute;
+}
+
+.menu:hover {
+    animation-name: expand;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+main {
+    background: #8BA0BD;
+    z-index: -1;
+}
+
+.hero-image {
+    background-image: url("../images/Fish1.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+    border: white solid 2px;
+    z-index: 1;
+}
+  
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 1px;
+    color: white;
+    z-index: -1;
+    font-size: 30px;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 75rem;
+    gap: 20px 20px;
+}
+
+.hero {
+    background: #d22b1f;
+}
+
+.content {
+    background: #129a22;
+    flex: 1;
+}
+
+.sidebar {
+    border: 1px solid #000000;
+    background: #673ab7;
+    flex: 0 1 300px
+}
+
+.footer {
+    border: 1px solid #000000;
+    background: #616161;
+}
+
+
+@media screen and (min-width: 640px){
+    .flex-container {
+        display: flex;
+    }    
+    .hero-text {
+        font-size: 50px;
+    }
+}
