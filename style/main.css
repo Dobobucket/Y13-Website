@@ -208,7 +208,7 @@ a:link, a:visited, a:hover, a:active {
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 25%;
+    flex: 20%;
     max-width: 25%;
     padding: 0 4px;
   }
@@ -223,7 +223,10 @@ a:link, a:visited, a:hover, a:active {
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
-      max-width: 50%;
+      max-width: 40%;
+    }
+    .row {
+        justify-content: center;
     }
   }
   
