@@ -157,13 +157,17 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .content {
-    background: #129a22;
+    background-image: url('../images/Textbackdrop.jpg');
+    background-size: cover;
     flex: 1;
+    color: #ffffff;
+    font-size: x-large;
+    border: 2px solid #ffffff;
 }
 
 .sidebar {
     border: 1px solid #000000;
-    background: #673ab7;
+    background: #ffffff;
     flex: 0 1 300px
 }
 
