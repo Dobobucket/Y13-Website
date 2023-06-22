@@ -146,6 +146,18 @@ a:link, a:visited, a:hover, a:active {
     font-size: 30px;
 }
 
+.pageindicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: small;
+    padding: 10px 15px;
+    background-color: #000000;
+    border-right: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+}
+
 .wrapper {
     margin: auto;
     max-width: 75rem;
