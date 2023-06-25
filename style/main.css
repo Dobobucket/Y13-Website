@@ -20,7 +20,7 @@ main {
 }
 
 
-section, aside, footer {
+section, footer {
     margin: 0;
     padding: 20px;
     border: 1px solid #000000;
@@ -148,24 +148,20 @@ a:link, a:visited, a:hover, a:active {
 
 .pageindicator {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    right: 0;
     color: #ffffff;
     font-size: small;
     padding: 10px 15px;
     background-color: #000000;
-    border-right: 2px solid #ffffff;
-    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 .wrapper {
     margin: auto;
     max-width: 75rem;
     gap: 20px 20px;
-}
-
-.hero {
-    background: #d22b1f;
 }
 
 .content {
@@ -175,12 +171,26 @@ a:link, a:visited, a:hover, a:active {
     color: #ffffff;
     font-size: x-large;
     border: 2px solid #ffffff;
+    margin-bottom: 20px;
 }
 
 .sidebar {
-    border: 1px solid #000000;
-    background: #ffffff;
-    flex: 0 1 300px
+    flex: 0 1 300px;
+}
+
+.sidebar img{
+    width: 300px;
+    border: 2px solid #ffffff;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    font-size: small;
+    padding: 10px 15px;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    font-size: large;
+    width: 270px;
 }
 
 .back-to-top-link {
@@ -244,6 +254,22 @@ a:link, a:visited, a:hover, a:active {
     .row {
         justify-content: center;
     }
+
+    .sidebar {
+        display: flex;
+        flex: 0 1 100px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .sidebar img {
+        width: 150px;
+    }
+
+    .sidebar h2 {
+        width: 120px;
+    }
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -252,4 +278,6 @@ a:link, a:visited, a:hover, a:active {
       flex: 100%;
       max-width: 100%;
     }
+
+    
   }
