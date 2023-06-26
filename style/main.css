@@ -19,13 +19,13 @@ main {
     padding: 20px;
 }
 
-
-section, footer {
-    margin: 0;
+.footer {
     padding: 20px;
-    border: 1px solid #000000;
+    background-color: #000000;
+    border: 2px solid #ffffff;
     color: #ffffff;
 }
+
 
 @keyframes retract {
     from {width: 130px; height: 260px;}
@@ -171,7 +171,9 @@ a:link, a:visited, a:hover, a:active {
     color: #ffffff;
     font-size: x-large;
     border: 2px solid #ffffff;
+    padding: 20px;
     margin-bottom: 20px;
+    line-height: 180%;
 }
 
 .sidebar {
@@ -203,16 +205,12 @@ a:link, a:visited, a:hover, a:active {
     height: 3rem;
     border-radius: 50%;
     padding: 0.25rem;
+    margin: 20px;
   
     border: 2px solid white;
     background-color: black;
     transition: transform 80ms ease-in;
   
-}
-
-.footer {
-    border: 1px solid #000000;
-    background: #616161;
 }
 
 
@@ -261,6 +259,7 @@ a:link, a:visited, a:hover, a:active {
         flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
+        align-content: flex-start;
     }
 
     .sidebar img {
@@ -269,6 +268,10 @@ a:link, a:visited, a:hover, a:active {
 
     .sidebar h2 {
         width: 120px;
+    }
+
+    .content {
+        font-size: large;
     }
   }
   
