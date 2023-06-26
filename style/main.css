@@ -195,6 +195,11 @@ a:link, a:visited, a:hover, a:active {
     width: 270px;
 }
 
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-container {
     display: flex;
     justify-content: space-around;
@@ -268,40 +273,53 @@ width: 100%;
   
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-.column {
-    flex: 50%;
-    max-width: 40%;
-}
-.row {
-    justify-content: center;
-}
+    .column {
+        flex: 50%;
+        max-width: 40%;
+    }
+    .row {
+        justify-content: center;
+    }
 
-.sidebar {
-    display: flex;
-    flex: 0 1 100px;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-content: flex-start;
-}
+    .sidebar {
+        display: flex;
+        flex: 0 1 100px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-content: flex-start;
+    }
 
-.sidebar img {
-    width: 150px;
-}
+    .sidebar img {
+        width: 150px;
+    }
 
-.sidebar h2 {
-    width: 120px;
-}
+    .sidebar h2 {
+        width: 120px;
+    }
 
-.content {
-    font-size: large;
-}
+    .content {
+        font-size: large;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        
+    }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-.column {
-    flex: 100%;
-    max-width: 100%;
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+
 }
-}
+
