@@ -173,6 +173,7 @@ a:link, a:visited, a:hover, a:active {
 
 .exhib-display img{
     max-width: 500px;
+    max-height: 560px;
     height: auto;
     border: 2px solid #ffffff;
 }
@@ -185,7 +186,7 @@ a:link, a:visited, a:hover, a:active {
     font-size: x-large;
     border: 2px solid #ffffff;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 180%;
     min-width: 350px;
 }
@@ -235,6 +236,11 @@ a:link, a:visited, a:hover, a:active {
 
 .contact:hover {
     background-color: #8BA0BD;
+}
+
+iframe {
+    border: 2px solid #ffffff;
+    margin-bottom: 10px;
 }
 
 .row {
