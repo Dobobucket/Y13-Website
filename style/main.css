@@ -207,7 +207,7 @@ a:link, a:visited, a:hover, a:active {
     background-color: #000000;
     border: 2px solid #ffffff;
     font-size: large;
-    width: 270px;
+    width: auto;
 }
 
 .contact-wrapper {
@@ -251,15 +251,15 @@ iframe {
   
 /* Create four equal columns that sits next to each other */
 .column {
-flex: 20%;
-max-width: 25%;
-padding: 0 4px;
+    flex: 20%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
 .column img {
-margin-top: 8px;
-vertical-align: middle;
-width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 .back-to-top-link {
@@ -282,9 +282,11 @@ width: 100%;
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .flex-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
+
 
     .column {
         flex: 50%;
@@ -304,16 +306,11 @@ width: 100%;
     }
 
     .sidebar img {
-        width: 150px;
-    }
-
-    .sidebar h2 {
-        width: 120px;
+        width: 200px;
     }
 
     .content {
         font-size: large;
-        min-width: 0;
     }
 
     .contact-wrapper {
@@ -323,7 +320,10 @@ width: 100%;
 
     .contact-container {
         flex-direction: column;
-        
+    }
+
+    .exhib-display img {
+        width: 300px;
     }
 }
 
@@ -334,6 +334,9 @@ width: 100%;
         max-width: 100%;
     }
 
+    .hero-text {
+        font-size: xx-large;
+    }
 
 }
 
