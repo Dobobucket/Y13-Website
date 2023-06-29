@@ -178,7 +178,7 @@ a:link, a:visited, a:hover, a:active {
     background-size: cover;
     flex: 1;
     color: #ffffff;
-    font-size: x-large;
+    font-size: 17pt;
     padding: 20px;
     margin-bottom: 10px;
     line-height: 180%;
@@ -302,7 +302,7 @@ iframe {
     }
     /* Lowers text box font size */
     .content {
-        font-size: large;
+        font-size: 14pt;
     }
     /* Puts contact containers into a row so they were side by side */
     .contact-wrapper {
