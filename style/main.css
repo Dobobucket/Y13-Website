@@ -1,57 +1,57 @@
+/* Importing font for all Website text */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
+/* Default styles for all elements */
 * {
     margin: 0;
     padding: 0;
     font-family: Roboto;
 }
-
+/* Makes the Back to Top button scroll to the top smoothly */
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
     }
 }
-
+/* Styles for background */
 main {
-    background: #3C3133;
+    background:#3C3133;
     z-index: -1;
     margin: 0;
     padding: 20px;
 }
-
+/* Footer styles */
 .footer {
     padding: 20px;
     background-color: #000000;
-    border: 2px solid #ffffff;
     color: #ffffff;
 }
-
-
+/* Animations */
+/* Retraction of menu */
 @keyframes retract {
     from {width: 130px; height: 260px;}
     to {width: 60px; height: 50px;}
 }
-
+/* Expansion of menu */
 @keyframes expand {
     from {width: 60px; height: 50px;}
     to {width: 130px; height: 260px;}
 }
-
+/* Menu child appear */
 @keyframes show {
     from {opacity: 0%;}
     to {opacity: 100%;}
 }
-
+/* Menu child hide */
 @keyframes hide {
     from {opacity: 100%;}
     to {opacity: 0%;}
 }
-
+/* Menu box */
 .menu {
     display: flex;
     background-color: black;
-    border-bottom: white solid 2px; 
-    border-right: white solid 2px;
+    border: white solid 2px; 
     width: 60px;
     height: 50px;
     align-items: flex-start;
@@ -60,25 +60,31 @@ main {
     animation-duration: .5s;
     padding-top: 12px;
 }
-
+/* Expands menu box on hover */
+.menu:hover {
+    animation-name: expand;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+/* Navigation bar with child elements */
 .navbar {
     margin-top: 25px;
     font-weight: bold;
 }
-
+/* Plays display animation on menu hover */
 .menu:hover .child {
     animation-name: show;
     animation-duration: .5s;
     animation-fill-mode: forwards;
     display: block;
 }
-
+/* Makes the child elements with page links appear gradually */
 .navbar div:nth-child(1) {animation-delay: 0.0s; }
 .navbar div:nth-child(2) {animation-delay: 0.1s; }
 .navbar div:nth-child(3) {animation-delay: 0.2s; }
 .navbar div:nth-child(4) {animation-delay: 0.3s; }
 .navbar div:nth-child(5) {animation-delay: 0.4s; }
-
+/* Styles for page links */
 .child {
     color: white;
     font-weight:bold;
@@ -91,21 +97,21 @@ main {
     opacity: 0;
     display: none;
 }
-
+/* Changes background colour of link on hover */
 .child:hover {
     background-color: #8BA0BD;
 }
-
+/* Changes text colour of link on hover  */
 .child:hover a{
     color: black;
 }
-
+/* Removes standard link styles */
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     color: white;
 }
 
-
+/* Menu bars symbol styles and removing default button styles */
 .button {
     background-color: black;
     color: white;
@@ -114,13 +120,7 @@ a:link, a:visited, a:hover, a:active {
     position: absolute;
 }
 
-.menu:hover {
-    animation-name: expand;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-}
-
-
+/* Header background image + styles */
 .hero-image {
     background-image: url("../images/Fish1.jpg");
     background-color: #cccccc;
@@ -130,22 +130,20 @@ a:link, a:visited, a:hover, a:active {
     background-size: cover;
     position: relative;
     margin-bottom: 20px;
-    border: white solid 2px;
     z-index: 1;
 }
-  
+/* Website title styles */
 .hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 1px;
     color: white;
     z-index: -1;
     font-size: 50px;
 }
-
+/* Box for page indicator */
 .pageindicator {
     position: absolute;
     top: 0;
@@ -154,15 +152,14 @@ a:link, a:visited, a:hover, a:active {
     font-size: small;
     padding: 10px 15px;
     background-color: #000000;
-    border-left: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border: 2px solid #ffffff;
 }
-
+/* Wrapper for index content */
 .wrapper {
     margin: auto;
     max-width: 75rem;
 }
-
+/* General flexbox styles for easy resizing of all content */
 .flex-container {
     display: flex;
     gap: 20px;
@@ -170,62 +167,56 @@ a:link, a:visited, a:hover, a:active {
     justify-content: center;
     flex-wrap: wrap;
 }
-
+/* Image size styles to stop overflowing off screen */
 .exhib-display img{
     max-width: 500px;
-    max-height: 560px;
     height: auto;
-    border: 2px solid #ffffff;
 }
-
+/* General content styles for text boxes + Text backdrop */
 .content {
     background-image: url('../images/Textbackdrop.jpg');
     background-size: cover;
     flex: 1;
     color: #ffffff;
     font-size: x-large;
-    border: 2px solid #ffffff;
     padding: 20px;
     margin-bottom: 10px;
     line-height: 180%;
     min-width: 350px;
 }
-
+/* Setting Sidebar to a maximum width inside flexbox */
 .sidebar {
     flex: 0 1 300px;
 }
-
+/* Contains images to sidebar size */
 .sidebar img{
     width: 100%;
-    border: 2px solid #ffffff;
 }
-
+/* Image label styles */
 .sidebar h2 {
     color: #ffffff;
     font-size: small;
     padding: 10px 15px;
     background-color: #000000;
-    border: 2px solid #ffffff;
     font-size: large;
     width: auto;
 }
-
+/* Flexbox for both contact containers */
 .contact-wrapper {
     display: flex;
     flex-direction: column;
 }
-
+/* Styles for the contact content and symbol containers */
 .contact-container {
     display: flex;
     justify-content: space-around;
     gap: 20px;
     background-color: #000000;
-    border: 2px solid #ffffff;
     color: #ffffff;
     line-height: 180%;
     padding: 10px;
 }
-
+/* Symbol styles */
 .contact  {
     padding: 20px;
     font-size: 30px;
@@ -233,38 +224,39 @@ a:link, a:visited, a:hover, a:active {
     text-align: center;
     flex-grow: 1;
 }
-
+/* Symbol hover background colour */
 .contact:hover {
     background-color: #8BA0BD;
 }
-
+/* Embedded Youtube video size styles */
 iframe {
-    border: 2px solid #ffffff;
     margin-bottom: 10px;
+    width: 315px;
+    height: 560px;
 }
-
-.row {
+/* Flexbox container for image columns */
+.gallery-container {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+    justify-content: center;
 }
   
-/* Create four equal columns that sits next to each other */
+/* Creates four equal columns that sit next to each other */
 .column {
     flex: 20%;
     max-width: 25%;
     padding: 0 4px;
 }
-
+/* Fits images within columns */
 .column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
 }
-
+/* Styles for back to top button giving a circular box */
 .back-to-top-link {
     display: inline-block;
-    
     font-size: 2rem;
     line-height: 3rem;
     text-align: center;
@@ -273,29 +265,29 @@ iframe {
     border-radius: 50%;
     padding: 0.25rem;
     margin: 20px;
-  
     border: 2px solid white;
     background-color: black;
-    transition: transform 80ms ease-in;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* -- Responsive layout for smaller screens (<800px) -- */
+
 @media screen and (max-width: 800px) {
+    /* Shrinks title text */
+    .hero-text {
+        font-size: xx-large;
+    }
+    /* Changes flexbox to columns and stack elements on top of eachother */
     .flex-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-
+    /* Makes 2 columns (instead of 4) */
     .column {
         flex: 50%;
         max-width: 40%;
     }
-    .row {
-        justify-content: center;
-    }
-
+    /* Shrinks sidebar size and gaps */
     .sidebar {
         display: flex;
         flex: 0 1 100px;
@@ -304,39 +296,34 @@ iframe {
         justify-content: center;
         align-content: flex-start;
     }
-
+    /* Shrinks sidebar images */
     .sidebar img {
         width: 200px;
     }
-
+    /* Lowers text box font size */
     .content {
         font-size: large;
     }
-
+    /* Puts contact containers into a row so they were side by side */
     .contact-wrapper {
         flex-direction: row;
         gap: 10px;
     }
-
+    /* Changes the contact info and symbols into columns to fit inside the smaller screen size */
     .contact-container {
         flex-direction: column;
     }
-
+    /* Shrinks down images on blog and exhibition pages */
     .exhib-display img {
         width: 300px;
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout (<600px) */
 @media screen and (max-width: 600px) {
+    /* makes the two columns stack on top of each other instead of next to each other */
     .column {
         flex: 100%;
         max-width: 100%;
     }
-
-    .hero-text {
-        font-size: xx-large;
-    }
-
 }
-
